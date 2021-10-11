@@ -1,4 +1,4 @@
-package org.liftio.purecoincidence
+package purecoincidence
 
 import cats.effect.{ExitCode, IO, IOApp}
 

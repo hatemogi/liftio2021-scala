@@ -6,7 +6,6 @@ val MunitCatsEffectVersion = "1.0.6"
 
 lazy val root = (project in file("."))
   .settings(
-    organization := "org.liftio",
     name := "purecoincidence",
     version := "0.0.1-SNAPSHOT",
     scalaVersion := "2.13.6",

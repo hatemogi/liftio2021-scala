@@ -1,4 +1,4 @@
-package org.liftio.purecoincidence
+package purecoincidence
 
 import cats.Applicative
 import cats.implicits._
