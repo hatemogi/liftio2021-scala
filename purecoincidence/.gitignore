@@ -4,3 +4,5 @@ project/project
 **/.idea
 **/.metals
 **/.vscode
+**/.bloop
+project/metals.sbt
