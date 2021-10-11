@@ -8,8 +8,7 @@ import java.util.function.Function;
 import static java.lang.System.out;
 import static java.util.stream.Collectors.toList;
 
-public class Functor {
-    Function<Integer, Integer> triple = x -> x * 3;
+public class Functor extends HigherOrderFunction {
     Function<Integer, Boolean> odd = x -> x % 2 == 0;
     Function<Integer, Boolean> tripleOdd = odd.compose(triple);
 
