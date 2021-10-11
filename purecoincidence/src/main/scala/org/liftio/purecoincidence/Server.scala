@@ -9,7 +9,7 @@ import org.http4s.ember.server.EmberServerBuilder
 import org.http4s.implicits._
 import org.http4s.server.middleware.Logger
 
-object PurecoincidenceServer {
+object Server {
 
   def stream[F[_]: Async]: Stream[F, Nothing] = {
     for {
@@ -22,8 +22,8 @@ object PurecoincidenceServer {
       // want to extract a segments not checked
       // in the underlying routes.
       httpApp = (
-        PurecoincidenceRoutes.helloWorldRoutes[F](helloWorldAlg) <+>
-        PurecoincidenceRoutes.jokeRoutes[F](jokeAlg)
+        Routes.helloWorldRoutes[F](helloWorldAlg) <+>
+        Routes.jokeRoutes[F](jokeAlg)
       ).orNotFound
 
       // With Middlewares in place
