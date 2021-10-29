@@ -11,16 +11,5 @@ object Purity extends App {
     pure(2, 3) + p,
     pure(2, 3) + pure(2, 3),
   ))    // => (34,34,34)
-
-  def pureLongExpressionA(a: Int, b: Int): Int =
-    4*a*a + pure(a, b) + 6*b
-
-  def pureLongExpressionB(a: Int, b: Int): Int =
-    3 * pure(a, b)
-
-  println((
-    pureLongExpressionA(3, 4),
-    pureLongExpressionB(3, 4)
-  ))    // => (90,90)
 }
 
