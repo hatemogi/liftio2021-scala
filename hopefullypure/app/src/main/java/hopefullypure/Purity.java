@@ -8,25 +8,20 @@ public class Purity {
         return 2*a*a + 3*b;
     }
 
-    static int current = 0;
-    static int impure(int n) {
-        return current += n;
-    }
-
     public static void main(String[] args) {
         int p = pure(2, 3);
         out.println(
           format("%d, %d, %d",
-                  p + p,
-                  pure(2, 3) + p,
-                  pure(2, 3) + pure(2, 3))); // => 34, 34, 34
+                 p + p,
+                 pure(2, 3) + p,
+                 pure(2, 3) + pure(2, 3))); // => 34, 34, 34
+    }
 
-        int i = impure(2);
+    int pureLongExpressionA(int a, int b) {
+        return 4*a*a + pure(a, b) + 6*b;
+    }
 
-        out.println(
-          format("%d, %d, %d",
-            i + i,
-            impure(2) + i,
-            impure(2) + impure(2)));  // => 4, 6, 14
+    int pureLongExpressionB(int a, int b) {
+        return 3 * pure(a, b);
     }
 }

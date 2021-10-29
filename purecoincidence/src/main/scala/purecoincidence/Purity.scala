@@ -2,9 +2,9 @@ package purecoincidence
 
 object Purity extends App {
   def pure(a: Int, b: Int): Int =
-    2*a*a + 3*b  // 2a^2 + 3b
+    2*a*a + 3*b    // 2a^2 + 3b
 
-  val p = pure(2, 3) // => 17
+  val p = pure(2, 3)   // => 17
 
   println((
     p + p,
@@ -12,28 +12,15 @@ object Purity extends App {
     pure(2, 3) + pure(2, 3),
   ))    // => (34,34,34)
 
-  var current: Int = 0
-  def impure(n: Int): Int = {
-    current += n
-    current
-  }
-
-  val i = impure(2)
-
-  println((
-    i + i,
-    impure(2) + i,
-    impure(2) + impure(2)
-  ))  // (4,6,14)
-
-
   def pureLongExpressionA(a: Int, b: Int): Int =
-    3*a*a + pure(a, b) + 4*b
+    4*a*a + pure(a, b) + 6*b
 
   def pureLongExpressionB(a: Int, b: Int): Int =
-    2 * pure(a, b) + 2 * b
+    3 * pure(a, b)
 
-
-
+  println((
+    pureLongExpressionA(3, 4),
+    pureLongExpressionB(3, 4)
+  ))    // => (90,90)
 }
 
