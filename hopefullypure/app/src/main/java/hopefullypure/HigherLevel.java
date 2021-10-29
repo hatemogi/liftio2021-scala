@@ -1,6 +1,8 @@
 package hopefullypure;
 
 import static java.util.stream.IntStream.rangeClosed;
+import static java.lang.System.out;
+import static java.lang.String.format;
 
 public class HigherLevel {
     static int factA(int n) {
@@ -19,8 +21,11 @@ public class HigherLevel {
     }
 
     public static void main(String[] args) {
-        System.out.println(
-          String.format("%d, %d, %d",
+        out.println(
+          format("%d, %d, %d",
             factA(5), factB(5), factC(5)));
     }
 }
+
+
+

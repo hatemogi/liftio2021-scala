@@ -1,7 +1,7 @@
 package purecoincidence
 
 object HigherLevel extends App {
-  def fact0(n: Int): Int = {
+  def factA(n: Int): Int = {
     var r = 1
     for {
       i <- 1 to n
@@ -9,16 +9,20 @@ object HigherLevel extends App {
     r
   }
 
-  def fact1(n: Int): Int =
+  def factB(n: Int): Int =
     if (n <= 1) 1
-    else n * fact1(n - 1)
+    else n * factB(n - 1)
 
-  def fact2(n: Int): Int =
+  def factC(n: Int): Int =
     (1 to n).product
 
   println((
-    fact0(5),
-    fact1(5),
-    fact2(5)
-  ))
+    factA(5),
+    factB(5),
+    factC(5)
+  ))  // => (120,120,120)
 }
+
+
+
+

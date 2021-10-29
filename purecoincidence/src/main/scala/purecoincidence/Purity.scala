@@ -10,7 +10,7 @@ object Purity extends App {
     p + p,
     pure(2, 3) + p,
     pure(2, 3) + pure(2, 3),
-  ))
+  ))    // => (34,34,34)
 
   var current: Int = 0
   def impure(n: Int): Int = {
@@ -24,7 +24,7 @@ object Purity extends App {
     i + i,
     impure(2) + i,
     impure(2) + impure(2)
-  ))
+  ))  // (4,6,14)
 
 
   def pureLongExpressionA(a: Int, b: Int): Int =
