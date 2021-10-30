@@ -23,4 +23,3 @@ public class PurelyLong {
             expressionB(3, 4)));
     }
 }
-

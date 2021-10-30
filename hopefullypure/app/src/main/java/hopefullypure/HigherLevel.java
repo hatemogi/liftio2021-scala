@@ -26,6 +26,3 @@ public class HigherLevel {
             factA(5), factB(5), factC(5)));
     }
 }
-
-
-

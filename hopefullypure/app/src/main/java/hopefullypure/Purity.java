@@ -16,12 +16,4 @@ public class Purity {
                  pure(2, 3) + p,
                  pure(2, 3) + pure(2, 3))); // => 34, 34, 34
     }
-
-    int pureLongExpressionA(int a, int b) {
-        return 4*a*a + pure(a, b) + 6*b;
-    }
-
-    int pureLongExpressionB(int a, int b) {
-        return 3 * pure(a, b);
-    }
 }

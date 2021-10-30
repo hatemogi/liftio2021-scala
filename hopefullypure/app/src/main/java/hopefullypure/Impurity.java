@@ -18,7 +18,3 @@ public class Impurity {
                  impure(2) + impure(2)));
     }
 }
-
-
-
-

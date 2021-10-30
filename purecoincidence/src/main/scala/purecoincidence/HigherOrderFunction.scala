@@ -11,7 +11,8 @@ object HigherOrderFunction {
   val square: Int => Int = exp(2)
 
   def main(args: Array[String]) =
-    println(
-      List(1, 2, 3, 4).map(triple compose square)
-    )     // => List(3, 12, 27, 48)
+    println((
+      List(1, 2, 3, 4).map(triple compose square),
+      List(1, 2, 3, 4).map(square).map(triple)
+    ))     // => List(3, 12, 27, 48), ...
 }
