@@ -10,12 +10,12 @@ public class HigherOrderFunction {
         return x -> x * n;
     }
 
-    static Function<Integer, Integer> exp(int r) {
+    static Function<Integer, Integer> pow(int r) {
         return x -> (int)Math.pow(x, r);
     }
 
     static Function<Integer, Integer> triple = multiple(3);
-    static Function<Integer, Integer> square = exp(2);
+    static Function<Integer, Integer> square = pow(2);
 
     public static void main(String[] args) {
         System.out.println(
